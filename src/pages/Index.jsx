@@ -61,7 +61,7 @@ const noteOptions = [
 
 const Index = () => {
   const navigate = useNavigate();
-  const [selectedCurrency, setSelectedCurrency] = useState("INR");
+  const [selectedCurrency, setSelectedCurrency] = useState("GBP");
   const [billTo, setBillTo] = useState({ name: "", address: "", phone: "" });
   const [shipTo, setShipTo] = useState({ name: "", address: "", phone: "" });
   const [invoice, setInvoice] = useState({
@@ -109,7 +109,7 @@ const Index = () => {
       setItems(parsedData.items || []);
       settaxPercentage(parsedData.taxPercentage || 0);
       setNotes(parsedData.notes || "");
-      setSelectedCurrency(parsedData.selectedCurrency || "INR"); // Load selectedCurrency from localStorage
+      setSelectedCurrency(parsedData.selectedCurrency || "GBP"); // Load selectedCurrency from localStorage
     } else {
       // If no saved data, set invoice number
       setInvoice((prev) => ({
@@ -274,7 +274,7 @@ const Index = () => {
       setItems(templateData.items || []);
       settaxPercentage(templateData.taxPercentage || 0);
       setNotes(templateData.notes || "");
-      setSelectedCurrency(templateData.selectedCurrency || "INR");
+      setSelectedCurrency(templateData.selectedCurrency || "GBP");
     }
   };
 
@@ -370,8 +370,9 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-all duration-500">
       <div className="container mx-auto px-4 py-8 relative">
         <h1 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-          Bill Generator Pro
+          Billsprint
         </h1>
+        <h3 className="text-4x1 font-light mb-8 text-center">Your no.1 bills and invoice generator</h3>
         
         <div className="fixed top-4 left-4 flex gap-2">
           <button

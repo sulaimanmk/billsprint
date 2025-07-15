@@ -3,7 +3,7 @@ import React from 'react';
 const Receipt4 = ({ data }) => {
   const { billTo, invoice, yourCompany, items, taxPercentage, footer, cashier, selectedCurrency } = data;
   const currentTime = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
-  const currencySymbol = selectedCurrency === 'USD' ? '$' : '₹';
+  const currencySymbol = selectedCurrency === 'USD' ? '$' : '£';
 
   return (
     <div className="p-4 font-['Courier_New',_monospace]">

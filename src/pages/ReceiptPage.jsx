@@ -77,7 +77,7 @@ const ReceiptPage = () => {
   const [theme, setTheme] = useState("Receipt1");
   const [notes, setNotes] = useState("");
   const [footer, setFooter] = useState("Thank you");
-  const [selectedCurrency, setSelectedCurrency] = useState("INR");
+  const [selectedCurrency, setSelectedCurrency] = useState("GBP");
 
   const refreshFooter = () => {
     const randomIndex = Math.floor(Math.random() * footerOptions.length);
@@ -97,7 +97,7 @@ const ReceiptPage = () => {
       setTaxPercentage(parsedData.taxPercentage || 0);
       setNotes(parsedData.notes || "");
       setFooter(parsedData.footer || "Thank you");
-      setSelectedCurrency(parsedData.selectedCurrency || "INR");
+      setSelectedCurrency(parsedData.selectedCurrency || "GBP");
     } else {
       // Initialize with default values if nothing in localStorage
       setInvoice((prev) => ({ ...prev, number: generateRandomInvoiceNumber() }));

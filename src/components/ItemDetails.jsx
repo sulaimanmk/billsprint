@@ -7,8 +7,8 @@ import { formatCurrency, getCurrencySymbol } from '../utils/formatCurrency.js';
 const ItemDetails = ({ items, handleItemChange, addItem, removeItem, currencyCode: propCurrencyCode }) => {
   let currencyCode = propCurrencyCode;
   if (!currencyCode) {
-    console.warn("Warning: currencyCode prop not provided to ItemDetails. Defaulting to 'INR'.");
-    currencyCode = 'INR';
+    console.warn("Warning: currencyCode prop not provided to ItemDetails. Defaulting to 'GBP'.");
+    currencyCode = 'GBP';
   }
   const currencySymbol = getCurrencySymbol(currencyCode);
 
